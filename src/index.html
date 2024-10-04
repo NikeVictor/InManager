@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Inventory and Invoice Manager</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Inventory and Invoice Manager</h1>
+    </header>
+    <nav>
+      <button id="inventoryBtn">Inventory</button>
+      <button id="invoiceBtn">Invoices</button>
+      <button id="reportBtn">Reports</button>
+    </nav>
+    <main id="content">
+      <div id="inventorySection" class="section">
+        <h2>Inventory Management</h2>
+        <form id="addItemForm">
+          <input type="text" id="itemName" placeholder="Item Name" required>
+          <input type="number" id="itemQuantity" placeholder="Quantity" required>
+          <input type="number" id="itemPrice" placeholder="Price" step="0.01" required>
+          <button type="submit">Add Item</button>
+        </form>
+        <table id="inventoryTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="inventoryList"></tbody>
+        </table>
+      </div>
+      <div id="invoiceSection" class="section" style="display:none;">
+        <h2>Invoice Management</h2>
+        <!-- Invoice form will go here -->
+      </div>
+      <div id="reportSection" class="section" style="display:none;">
+        <h2>Reports</h2>
+        <!-- Report generation options will go here -->
+      </div>
+    </main>
+    <script src="renderer.js"></script>
+  </body>
+</html>
